@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-// import * as API from "../api";
+import * as API from "../api";
 
 const Login = (props) => {
     const [isLoggingIn, setIsLoggingIn] = useState(true);
     const [passwordVisible, setPasswordVisible] = useState(false);
 
     const [loginInfo, setLoginInfo] = useState({
-        userName: "",
+        name: "",
         email: "",
         password: "",
     });
     const [errorMessage, setErrorMessage] = useState({
-        userNameError: "",
+        nameError: "",
         emailError: "",
         passwordError: "",
     });
 
     const handleAuthentication = async () => {
-        if (!loginInfo.userName && !isLoggingIn) {
+        if (!loginInfo.name && !isLoggingIn) {
             setErrorMessage({
                 ...errorMessage,
-                userNameError: "Preencha o campo de usuário para continuar...",
+                usernameError: "Preencha o campo de usuário para continuar...",
             });
             return;
         }
@@ -47,16 +47,21 @@ const Login = (props) => {
         }
 
         try {
+            const loginData_underlined = Object.keys(loginInfo).reduce((acc, key) => {
+                acc['user_' + key] = loginInfo[key];
+                return acc;
+            }, {});
+
             if (isLoggingIn) {
-                // const { data } = await API.signin(loginInfo);
-                // localStorage.setItem("UserInfo", JSON.stringify(data.result));
+                const { data } = await API.signin(loginData_underlined);
+                localStorage.setItem("UserInfo", JSON.stringify(data));
 
             } else {
-                // const { data } = await API.signup(loginInfo);
-                // localStorage.setItem("UserInfo", JSON.stringify(data.result));
+                const { data } = await API.signup(loginData_underlined);
+                localStorage.setItem("UserInfo", JSON.stringify(data));
             }
 
-            // props.closeLogin();
+            props.closeLogin();
 
         } catch (error) {
             handleAuthenticationError(error.response ? error.response.status : 500);
@@ -93,12 +98,12 @@ const Login = (props) => {
 
     const handleToggleIsLoggingIn = () => {
         setLoginInfo({
-            userName: "",
+            name: "",
             email: "",
             password: "",
         });
         setErrorMessage({
-            userNameError: "",
+            nameError: "",
             emailError: "",
             passwordError: "",
         });
@@ -109,7 +114,7 @@ const Login = (props) => {
     const handleUserNameFocus = () => {
         setErrorMessage({
             ...errorMessage,
-            userNameError: "",
+            nameError: "",
         });
     };
 
@@ -190,7 +195,7 @@ const Login = (props) => {
                             {!isLoggingIn && (
                                 <div
                                     className={`cta-form-input ${
-                                        errorMessage.userNameError !== ""
+                                        errorMessage.nameError !== ""
                                             ? "cta-form-error"
                                             : ""
                                     }`}
@@ -198,17 +203,17 @@ const Login = (props) => {
                                     <div className="label">
                                         <label htmlFor="username">Usuário</label>
                                         <label htmlFor="username">
-                                            {errorMessage.userNameError}
+                                            {errorMessage.nameError}
                                         </label>
                                     </div>
                                     <input
                                         id="username"
                                         type="text"
-                                        value={loginInfo.userName}
+                                        value={loginInfo.name}
                                         onChange={(event) =>
                                             setLoginInfo({
                                                 ...loginInfo,
-                                                userName: event.target.value,
+                                                name: event.target.value,
                                             })
                                         }
                                         onFocus={handleUserNameFocus}
