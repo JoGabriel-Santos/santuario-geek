@@ -2,7 +2,7 @@
 
 .header {
     align-items: center;
-    background-color: #ffffff;
+    background-color: #fdf2e9;
     display: flex;
     height: 9.6rem;
     justify-content: space-between;
@@ -471,4 +471,41 @@
 
 .saved {
     background-color: #00FF00 !important;
+}
+
+/* ----- Hero ----- */
+
+.section-hero {
+    background-color: #fdf2e9;
+    padding: 4.8rem 0 9.6rem 0;
+}
+
+.hero {
+    align-items: center;
+    display: grid;
+    gap: 9.6rem;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    max-width: 130rem;
+    padding: 0 3.2rem;
+}
+
+.hero-description {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+}
+
+.delivered-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.delivered-text span {
+    color: #cf711f;
+    font-weight: 700;
+}
+
+.hero-image {
+    width: 100%;
 }
