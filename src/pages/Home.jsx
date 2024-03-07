@@ -1,6 +1,6 @@
 import React from "react";
 
-const Hero = () => {
+const Home = () => {
 
     return (
         <section className="section-hero">
@@ -27,4 +27,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default Home;

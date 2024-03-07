@@ -32,7 +32,7 @@
     border-radius: 5px;
     color: #333;
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
     padding: 2px;
     text-decoration: none;
@@ -231,12 +231,14 @@
 
 .section-forms--container {
     align-items: flex-start;
+    background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     padding: 3rem;
 }
+
 
 .form-title {
     font-size: 2.6rem;
@@ -258,7 +260,7 @@
 }
 
 .cta-form-picture img {
-    border-radius: 50%;
+    border-radius: 10px;
     display: block;
     height: 80px;
     margin: 0 auto;
@@ -296,12 +298,14 @@
 }
 
 .image-upload {
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .image-upload label {
+    background-color: #ffffff;
     font-size: 1.4rem;
 }
 
@@ -473,7 +477,7 @@
     background-color: #00FF00 !important;
 }
 
-/* ----- Hero ----- */
+/* ----- Home ----- */
 
 .section-hero {
     background-color: #fdf2e9;
