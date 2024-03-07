@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
+import { useHistory } from "react-router-dom";
 import Login from "./Login";
 
 const Navbar = () => {
+    const history = useHistory();
     const menuRef = useRef(null);
 
     const userLogged = JSON.parse(localStorage.getItem("UserInfo"));
@@ -40,6 +42,12 @@ const Navbar = () => {
 
     const toggleNav = () => {
         setIsNavOpen(!isNavOpen);
+    }
+
+    const handleLogout = () => {
+        localStorage.removeItem("UserInfo");
+        history.push("/");
+        window.location.reload();
     };
 
     useEffect(() => {
@@ -68,15 +76,15 @@ const Navbar = () => {
         <React.Fragment>
             <header className={`header ${isNavOpen ? 'nav-open' : ''}`}>
                 <div className="logo-navigation">
-                    <a href="#">
+                    <a href="/">
                         <img className="logo" src={require("../util/img/logo_2.png")} alt=""/>
                     </a>
 
                     <nav className="main-navigation">
                         <ul className="main-navigation-list">
-                            <li><a className="main-navigation-link" href="#">Home</a></li>
-                            <li><a className="main-navigation-link" href="#">Produtos</a></li>
-                            <li><a className="main-navigation-link" href="#">Contatos</a></li>
+                            <li><a className="main-navigation-link" href="#home">Home</a></li>
+                            <li><a className="main-navigation-link" href="#produtos">Produtos</a></li>
+                            <li><a className="main-navigation-link" href="#contatos">Contatos</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -93,6 +101,33 @@ const Navbar = () => {
                     <ion-icon className="icon-navigation-mobile" name="menu-outline"></ion-icon>
                     <ion-icon className="icon-navigation-mobile" name="close-outline"></ion-icon>
                 </button>
+
+                {showMenu && (
+                    <div className="header-user--options" ref={menuRef}>
+                        <ul className="options-list">
+                            {userLogged && userLogged.role !== "client" && (
+                                <a href="/novo-produto">
+                                    <li className="option">
+                                        <ion-icon name="duplicate-outline" size="small"></ion-icon>
+                                        <span>Novo produto</span>
+                                    </li>
+                                </a>
+                            )}
+
+                            <a href="/configuracao-de-conta">
+                                <li className="option">
+                                    <ion-icon name="person-outline" size="small"></ion-icon>
+                                    <span>Detalhes da conta</span>
+                                </li>
+                            </a>
+
+                            <li className="option border-top" onClick={handleLogout}>
+                                <ion-icon name="exit-outline" size="small"></ion-icon>
+                                <span>Logout</span>
+                            </li>
+                        </ul>
+                    </div>
+                )}
             </header>
 
             {showLogin && <Login closeLogin={toggleShowLogin}/>}
