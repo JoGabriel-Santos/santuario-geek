@@ -15,6 +15,5 @@ const API = axios.create({ baseURL: 'http://localhost:5000' });
 export const signin = (userInfo) => API.post("/user/signin", userInfo);
 export const signup = (userInfo) => API.post("/user/signup", userInfo);
 
-export const getProducts = () => API.get(`/product/getProducts`);
-export const getProductById = (id_product) => API.get(`/product/getProductById/${id_product}`);
+export const fetchProducts = () => API.get(`/product/fetchProducts`);
 export const addProduct = (productInfo) => API.post("/product/addProduct", productInfo);
