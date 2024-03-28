@@ -16,4 +16,5 @@ export const signin = (userInfo) => API.post("/user/signin", userInfo);
 export const signup = (userInfo) => API.post("/user/signup", userInfo);
 
 export const fetchProducts = () => API.get(`/product/fetchProducts`);
+export const fetchProductById = (productId) => API.get(`/product/fetchProductById/${productId}`);
 export const addProduct = (productInfo) => API.post("/product/addProduct", productInfo);

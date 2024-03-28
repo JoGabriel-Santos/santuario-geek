@@ -14,7 +14,7 @@ const ProductCard = ({ productData }) => {
     };
 
     const redirectToProduct = () => {
-        // window.location.href = `/detalhes-do-produto/${productData._id}`;
+        window.location.href = `/detalhes-do-produto/${productData.product_id}`;
     };
 
     if (!productData) {
