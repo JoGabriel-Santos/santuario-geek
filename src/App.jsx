@@ -13,8 +13,6 @@ const App = () => {
                 <Navbar/>
                 <Switch>
                     <Route path="/" exact component={Home}/>
-                    <Route path="/novo-produto" exact component={NewProduct}/>
-                    <Route path="/detalhes-do-produto/:productId" exact component={Details}/>
                 </Switch>
             </BrowserRouter>
         </React.Fragment>

@@ -95,11 +95,15 @@ const NewProduct = () => {
                 <h6 className="form-descr">Preencha as informações abaixo para publicar um novo produto:</h6>
 
                 <div className="cta-form-picture">
-                    <img
-                        src={productInfo.product_picture !== "" ? productInfo.product_picture : require("../util/img/no-photo-available.png")}
-                        className="product-picture"
-                        alt="Product picture"
-                    />
+                    {
+                        /*
+                            <img
+                                src={productInfo.product_picture !== "" ? productInfo.product_picture : require("../util/img/no-photo-available.png")}
+                                className="product-picture"
+                                alt="Product picture"
+                            />
+                        */
+                    }
 
                     <div className="image-upload">
                         <label className="file-input">
