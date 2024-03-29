@@ -3,9 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./pages/Navbar";
 import Home from "./pages/Home";
 import Authentication from "./pages/Authentication";
-
-import NewProduct from "./pages/NewProduct";
-import Details from "./pages/Details";
+import Shop from "./pages/Shop";
 
 const App = () => {
 
@@ -16,6 +14,7 @@ const App = () => {
                 <Switch>
                     <Route path="/" exact component={Home}/>
                     <Route path="/auth" exact component={Authentication}/>
+                    <Route path="/produtos" exact component={Shop}/>
                 </Switch>
             </BrowserRouter>
         </React.Fragment>

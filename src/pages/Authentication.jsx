@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Breadcrumb from "../components/Breadcrumb";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import * as API from "../api";
@@ -160,20 +161,7 @@ const Authentication = ({ isLogin = false }) => {
 
     return (
         <React.Fragment>
-            <section className="section-breadcrumb">
-                <div className="cr-breadcrumb-image">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="cr-breadcrumb-title">
-                                    <h2>{isLoggingIn ? "Login" : "Registro"}</h2>
-                                    <span> <a href="/">Home</a> - Login</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Breadcrumb title={isLoggingIn ? "Login" : "Registro"} span={<span> <a href="/">Home</a> - Login</span>}/>
 
             <section className="section-login padding-tb-100">
                 <div className="container">
