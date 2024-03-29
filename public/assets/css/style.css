@@ -336,7 +336,6 @@ p {
   font-size: 14px;
   font-family: "Manrope", sans-serif;
   font-weight: bold;
-  text-transform: capitalize;
   line-height: 1.2;
   background-color: #64b496;
   color: #fff;
@@ -345,6 +344,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2362,7 +2362,7 @@ ul.navbar-nav .dropdown:hover .dropdown-menu {
 
 .cr-banner-image-one {
   width: 100%;
-  background-image: url("../img/banner/banner.jpg");
+  background-image: url("../img/banner/banner-hero.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
