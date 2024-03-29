@@ -1,4 +1,5 @@
 import React from "react";
+import ProductList from "../components/ProductList";
 
 const Home = () => {
 
@@ -14,10 +15,7 @@ const Home = () => {
                                         <div className="col-lg-12">
                                             <div className="cr-left-side-contain slider-animation">
                                                 <h5><span>Consequuntur</span> lorem</h5>
-                                                <h1>Santuário Geek</h1>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                    Amet reiciendis beatae
-                                                </p>
+                                                <h1 className="font-weight--700">Santuário Geek</h1>
                                                 <div className="cr-last-buttons">
                                                     <a href="#" className="cr-button">
                                                         Ver produtos
@@ -32,6 +30,8 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <ProductList/>
         </React.Fragment>
     );
 };
