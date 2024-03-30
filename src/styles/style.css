@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 
 * {
     font-family: "Comfortaa", sans-serif !important;
+}
+
+.font-dosis option {
+    font-family: "Dosis", sans-serif !important;
+    font-size: 18px !important;
 }
 
 .font-weight--400 {
@@ -17,5 +23,39 @@
 }
 
 .product--title {
+    cursor: pointer;
+}
+
+.margin-top-8 {
+    margin-top: 8px;
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-top-3 {
+    margin-top: 3px;
+}
+
+.range-bar {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #f44336;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.range-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f44336;
     cursor: pointer;
 }

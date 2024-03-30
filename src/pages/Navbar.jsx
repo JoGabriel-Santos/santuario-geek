@@ -29,10 +29,10 @@ const Navbar = () => {
                                             </a>
                                             <ul className="dropdown-menu">
                                                 <li className="dropdown-menu--li">
-                                                    <a className="dropdown-item" href="/auth">Login</a>
+                                                    <a className="dropdown-item" href="/registro">Login</a>
                                                 </li>
                                                 <li className="dropdown-menu--li">
-                                                    <a className="dropdown-item" href="/auth">Registro</a>
+                                                    <a className="dropdown-item" href="/registro">Registro</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -107,10 +107,10 @@ const Navbar = () => {
                                             </a>
                                             <ul className="dropdown-menu">
                                                 <li className="dropdown-menu--li">
-                                                    <a className="dropdown-item" href="/login">Login</a>
+                                                    <a className="dropdown-item" href="/registro">Login</a>
                                                 </li>
                                                 <li className="dropdown-menu--li">
-                                                    <a className="dropdown-item" href="/register">Registro</a>
+                                                    <a className="dropdown-item" href="/registro">Registro</a>
                                                 </li>
                                             </ul>
                                         </li>

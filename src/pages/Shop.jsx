@@ -9,7 +9,7 @@ const Shop = () => {
     useEffect(() => {
         AOS.init({
             duration: 2000,
-            delay: 400,
+            delay: 200,
         });
     }, []);
 
@@ -19,9 +19,11 @@ const Shop = () => {
 
             <section className="section-shop padding-tb-100" data-aos="fade-up">
                 <div className="container">
-                    <Filter/>
+                    <div className="row">
+                        <Filter/>
 
 
+                    </div>
                 </div>
             </section>
         </React.Fragment>

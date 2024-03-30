@@ -155,7 +155,7 @@ const Authentication = ({ isLogin = false }) => {
     useEffect(() => {
         AOS.init({
             duration: 2000,
-            delay: 400,
+            delay: 200,
         });
     }, []);
 
