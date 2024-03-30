@@ -12,7 +12,6 @@ const Navbar = () => {
                             <div className="top-header">
                                 <a href="/" className="cr-logo">
                                     <img src={require("../util/images/logo/logo.png")} className="logo" alt="logo"/>
-                                    <img src={require("../util/images/logo/dark-logo.png")} className="dark-logo" alt="logo"/>
                                 </a>
                                 <form className="cr-search">
                                     <input className="search-input" type="text" placeholder="Pesquise por produtos..."/>
@@ -23,16 +22,13 @@ const Navbar = () => {
                                 <div className="cr-right-bar">
                                     <ul className="navbar-nav">
                                         <li className="nav-item dropdown">
-                                            <a className="nav-link dropdown-toggle cr-right-bar-item" href="javascript:void(0)">
+                                            <a className="nav-link dropdown-toggle cr-right-bar-item cursor-pointer">
                                                 <i className="ri-user-3-line"></i>
                                                 <span>Usuário</span>
                                             </a>
                                             <ul className="dropdown-menu">
                                                 <li className="dropdown-menu--li">
                                                     <a className="dropdown-item" href="/registro">Login</a>
-                                                </li>
-                                                <li className="dropdown-menu--li">
-                                                    <a className="dropdown-item" href="/registro">Registro</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -108,9 +104,6 @@ const Navbar = () => {
                                             <ul className="dropdown-menu">
                                                 <li className="dropdown-menu--li">
                                                     <a className="dropdown-item" href="/registro">Login</a>
-                                                </li>
-                                                <li className="dropdown-menu--li">
-                                                    <a className="dropdown-item" href="/registro">Registro</a>
                                                 </li>
                                             </ul>
                                         </li>

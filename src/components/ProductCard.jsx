@@ -35,7 +35,7 @@ const ProductCard = ({ productData }) => {
                                 <p>(4.5)</p>
                             </div>
                         </div>
-                        <a className="title product--title font-weight--600">{productData.product_name}</a>
+                        <a className="title cursor-pointer font-weight--600">{productData.product_name}</a>
                         <p className="cr-price">
                             <span className="new-price">R$ {formatPrice(productData.product_price)}</span>
                             <span className="old-price">R$ 80,00</span>
