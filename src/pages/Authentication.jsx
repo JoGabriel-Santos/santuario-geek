@@ -193,7 +193,6 @@ const Authentication = ({ isLogin = false }) => {
                                             <input type="checkbox" id="html"/>
                                             <label htmlFor="html">Lembrar-se de mim</label>
                                         </span>
-                                        <a className="link" href="/forgot">Esqueceu sua senha?</a>
                                     </div>
                                     <br/>
                                     <div className="login-buttons">
