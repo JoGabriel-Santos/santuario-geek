@@ -17,7 +17,7 @@ const Home = () => {
                                                 <h5><span>Consequuntur</span> lorem</h5>
                                                 <h1 className="font-weight--700">Santuário Geek</h1>
                                                 <div className="cr-last-buttons">
-                                                    <a href="#" className="cr-button">
+                                                    <a href="#" className="cr-button padding-top-12">
                                                         Ver produtos
                                                     </a>
                                                 </div>
